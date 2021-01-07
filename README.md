@@ -1,5 +1,6 @@
-# Record Command
-this repository aims to record some frequently-used command, including Linux and python commands.
+# Record Commands & Scripts
+This repository aims to record some frequently-used commands, including Linux and python commands & archive some frequently-used python scripts.
+
 
 # Linux Common Command
     cd - 返回上次的目录
