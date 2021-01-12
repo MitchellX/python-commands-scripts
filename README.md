@@ -324,3 +324,8 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     a = glob.glob('*')
     print(a)
     :: ['Audio', 'batch_run.py', 'Data', 'Deep3DFaceReconstruction', 'pipeline.jpg', 'readme.md', 'render-to-video', 'requirements.txt', 'requirements_colab.txt', 'test.py']
+    
+    
+    
+## ls 查看文件数量
+    ls | wc -l
