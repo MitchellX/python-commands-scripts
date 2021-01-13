@@ -28,6 +28,54 @@ Taylor Swift videos:
     
 
 
+## 从Linux服务器下载文件到Windows：
+    # scp root@10.1.22.5:/root/1.txt e:\scpdata\
+    scp xiangmingcan@10.207.174.24:/export2/xiangmingcan/celeba.tar e:    # 下载到E盘
+windows上传文件夹到linux服务器：
+
+    scp -rp e:\scpdata root@10.1.22.5:/root
+    
+Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/details/51673229?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param)
+
+### 远程到本地
+以admin的身份把IP地址为“192.168.219.125”，/home/admin/test目录下所有的东西都拷贝到本机/home/admin/目录下
+    
+    scp -r 用户名@计算机IP或者计算机名称:目录名 本地路径
+    scp -r  admin@192.168.219.125:/home/admin/test     /home/admin/
+### 本地到远程
+    
+    scp -r 要传的本地目录名     用户名@计算机IP或名称:远程路径
+    scp -r /home/music/    root@ipAddress:/home/root/others/ 
+    
+## linux tar (打包.压缩.解压缩)命令说明 | tar如何解压文件到指定的目录？
+
+    # 不需要加密/或Windows下一步解压，就用这个
+    tar -cvf ***.tar /source
+    tar -xvf ***.tar
+压缩
+    
+    tar -czvf *name*.tar.gz /source
+    tar -cjvf *name*.tar.bz2 /source
+    
+    tar -czvf 3000.tar.gz 3000/   #举例
+解压缩
+
+    tar -xzvf ***.tar.gz
+    tar -xjvf ***.tar.bz2
+参数解析
+
+    -c: compress建立压缩档案
+    -x：解压
+    -t：tex 查看内容
+    -v: view 查看过程
+    -f: force 参数-f是必须的。使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。
+    
+    -z：有gzip属性的
+    -j：有bz2属性的
+
+
+
+
 # Git Command
 
 ## download：
@@ -181,50 +229,6 @@ Taylor Swift videos:
     CUDA_VISIBLE_DEVICES=0,1         Devices 0 and 1 will be visible
 
 
-## 从Linux服务器下载文件到Windows：
-    # scp root@10.1.22.5:/root/1.txt e:\scpdata\
-    scp xiangmingcan@10.207.174.24:/export2/xiangmingcan/celeba.tar e:    # 下载到E盘
-windows上传文件夹到linux服务器：
-
-    scp -rp e:\scpdata root@10.1.22.5:/root
-    
-Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/details/51673229?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-3.channel_param)
-
-### 远程到本地
-以admin的身份把IP地址为“192.168.219.125”，/home/admin/test目录下所有的东西都拷贝到本机/home/admin/目录下
-    
-    scp -r 用户名@计算机IP或者计算机名称:目录名 本地路径
-    scp -r  admin@192.168.219.125:/home/admin/test     /home/admin/
-### 本地到远程
-    
-    scp -r 要传的本地目录名     用户名@计算机IP或名称:远程路径
-    scp -r /home/music/    root@ipAddress:/home/root/others/ 
-    
-## linux tar (打包.压缩.解压缩)命令说明 | tar如何解压文件到指定的目录？
-
-    # 不需要加密/或Windows下一步解压，就用这个
-    tar -cvf ***.tar /source
-    tar -xvf ***.tar
-压缩
-    
-    tar -czvf *name*.tar.gz /source
-    tar -cjvf *name*.tar.bz2 /source
-    
-    tar -czvf 3000.tar.gz 3000/   #举例
-解压缩
-
-    tar -xzvf ***.tar.gz
-    tar -xjvf ***.tar.bz2
-参数解析
-
-    -c: compress建立压缩档案
-    -x：解压
-    -t：tex 查看内容
-    -v: view 查看过程
-    -f: force 参数-f是必须的。使用档案名字，切记，这个参数是最后一个参数，后面只能接档案名。
-    
-    -z：有gzip属性的
-    -j：有bz2属性的
     
 
 ## 正则表达式
