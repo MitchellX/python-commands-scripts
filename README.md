@@ -329,3 +329,8 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     
 ## ls 查看文件数量
     ls | wc -l
+    
+## Windows下编辑的shell脚本在Linux下报错syntax错误
+这是编码格式ff（fileformat）的问题，vim进去按照下面指令修改文件格式即可
+    
+    :set ff=unix
