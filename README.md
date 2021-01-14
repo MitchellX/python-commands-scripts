@@ -111,7 +111,7 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
 
 # git强制覆盖本地命令（单条执行）：
 
-    git fetch --all && git reset --hard origin/master && git pull
+    git fetch --all && git reset --hard origin/mian && git pull
 
 
  git 删除远程分支上的某次提交
