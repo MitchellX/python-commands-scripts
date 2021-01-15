@@ -289,10 +289,11 @@ basename是指去掉 .mp4后的base名词
     
     
 # JD Jupyter
-    打开ssh端口     bash ~/note/xmc/
+    打开ssh端口     bash ~/notespace/xmc
     更新软件源       sudo apt-get update
     激活虚拟环境      source ~/envs/digitalman/bin/activate
     卸载并重装dlib       pip3 uninstall dlib     pip3 install dlib
+    设置root密码        sudo passwd
     
 ### linux下修改python的默认版本：即python2->python3
 删除原有链接
