@@ -255,6 +255,10 @@ Taylor Swift videos:
     screen -ls	              查看打开的screen会话。
     screen -r 编号	          退出后再次登录某个会话。
     Ctrl+d或exit	             结束screen会话。
+    
+    # 强制结束一些，你结束不了的session
+    screen -X -S [session # you want to kill] quit
+
 
 
 # shell命令
