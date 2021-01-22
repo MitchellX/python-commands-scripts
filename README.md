@@ -358,4 +358,8 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     
 ## 吧tensor多加一个维度
 以numpy读入的图片（3, 256, 256） -> (1, 3, 256,256)为例
-    img2 = torch.from_numpy(img2).float().unsqueeze(0).cuda(
+    img2 = torch.from_numpy(img2).float().unsqueeze(0).cuda()
+    
+## 用Python将list中的string转换为int
+    results = list(map(int, results))
+    还能将字符串后面的转义字符'\n \t'去除
