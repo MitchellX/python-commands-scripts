@@ -350,3 +350,8 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 这是编码格式ff（fileformat）的问题，vim进去按照下面指令修改文件格式即可
     
     :set ff=unix
+    
+## pytorch的Tensor转成int or float
+    tensor1.item()
+    如何要转成字符串形式：
+    str(tensor1.item())
