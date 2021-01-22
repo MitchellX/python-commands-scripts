@@ -355,3 +355,7 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     tensor1.item()
     如何要转成字符串形式：
     str(tensor1.item())
+    
+## 吧tensor多加一个维度
+以numpy读入的图片（3, 256, 256） -> (1, 3, 256,256)为例
+    img2 = torch.from_numpy(img2).float().unsqueeze(0).cuda(
