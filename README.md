@@ -356,10 +356,17 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     如何要转成字符串形式：
     str(tensor1.item())
     
-## 吧tensor多加一个维度
+## 把tensor多加一个维度
 以numpy读入的图片（3, 256, 256） -> (1, 3, 256,256)为例
+
     img2 = torch.from_numpy(img2).float().unsqueeze(0).cuda()
     
 ## 用Python将list中的string转换为int
     results = list(map(int, results))
     还能将字符串后面的转义字符'\n \t'去除
+    
+## Python, Numpy求 list 数组均值，方差，标准差
+    arr_mean = np.mean(array) 求均值
+    arr_var = np.var(array)求方差
+    arr_std = np.std(array,ddof=1)求标准差
+
