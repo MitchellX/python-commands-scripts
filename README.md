@@ -327,6 +327,10 @@ basename是指去掉 .mp4后的base名词
     apt-get update
     完成之后，即可装最新的软件了
     
+之后想从清华源下载的话，就用-i 指定路径：
+    
+    pip install virtualenv -i https://pypi.tuna.tsinghua.edu.cn/simple
+    
     
     
 ## 生成文件夹树形目录
