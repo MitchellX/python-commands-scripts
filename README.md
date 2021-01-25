@@ -374,3 +374,4 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     arr_var = np.var(array)求方差
     arr_std = np.std(array,ddof=1)求标准差
 
+### str.split('-', 1 );  以'-'为分隔符，分隔成两个，避免出现多个'-'的情况
