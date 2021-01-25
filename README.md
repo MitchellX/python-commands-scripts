@@ -379,3 +379,9 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     arr_std = np.std(array,ddof=1)求标准差
 
 ### str.split('-', 1 );  以'-'为分隔符，分隔成两个，避免出现多个'-'的情况
+
+### 计算欧氏距离Euclidean distance
+
+    dist = np.linalg.norm(vec1-vec2)
+    distance= np.sqrt(np.sum(np.square(vec1-vec2)))
+
