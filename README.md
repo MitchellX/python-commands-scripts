@@ -47,6 +47,10 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     scp -r 要传的本地目录名     用户名@计算机IP或名称:远程路径
     scp -r /home/music/    root@ipAddress:/home/root/others/ 
     
+### 传输多个文件夹
+    scp -r root@192.168.1.104:/usr/local/nginx/html/webs/\{index,json\} ./
+
+    
 ## linux tar (打包.压缩.解压缩)命令说明 | tar如何解压文件到指定的目录？
 
     # 不需要加密/或Windows下一步解压，就用这个
