@@ -385,3 +385,6 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     dist = np.linalg.norm(vec1-vec2)
     distance= np.sqrt(np.sum(np.square(vec1-vec2)))
 
+### pip 导出当前环境的所有包
+    
+    pip freeze > ./requirements.txt
