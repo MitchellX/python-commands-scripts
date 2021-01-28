@@ -388,3 +388,7 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 ### pip 导出当前环境的所有包
     
     pip freeze > ./requirements.txt
+    
+### linux下解压7z
+    sudo apt-get install p7zip-full
+    7za x filename.7z
