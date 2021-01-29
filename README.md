@@ -375,6 +375,8 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     
 ## Python, Numpy求 list 数组均值，方差，标准差
     arr_mean = np.mean(array) 求均值
+    # 求按列求均值，只剩一行。axis=1时候，按照行取均值，只剩一列
+    arr_mean = np.mean(array, axis=0) 
     arr_var = np.var(array)求方差
     arr_std = np.std(array,ddof=1)求标准差
 
