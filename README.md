@@ -373,6 +373,12 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     results = list(map(int, results))
     还能将字符串后面的转义字符'\n \t'去除
     
+    
+## 将[1, 2 ,3] 转换成string并且作为文件的写入参数
+    a = [1, 2, 3]
+    log.write(' '.join(map(str, a)))
+
+    
 ## Python, Numpy求 list 数组均值，方差，标准差
     arr_mean = np.mean(array) 求均值
     # 求按列求均值，只剩一行。axis=1时候，按照行取均值，只剩一列
