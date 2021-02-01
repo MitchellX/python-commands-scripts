@@ -295,6 +295,10 @@ basename是指去掉 .mp4后的base名词
     # 两个连用，只剩名词
     target_name = os.path.splitext(os.path.basename(target_path))[0]
     
+### os.path.split()分割文件和上级目录
+    landmark_txt = os.path.split(image_path)[1][:-3] + 'txt'
+    upper_folder = os.path.split(os.path.split(image_path)[0])[0]
+    
     
 # JD Jupyter
     打开ssh端口     bash ~/notespace/xmc
