@@ -409,3 +409,25 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 ### cv2在图片中添加文字
     # 各参数依次是：照片/添加的文字/左上角坐标/字体/字体大小/颜色/字体粗细
     cv2.putText(I,'there 0 error(s):',(50,150),cv2.FONT_HERSHEY_COMPLEX,6,(0,0,255),25)
+    
+### cv2.imread()读取通道顺序，以及转换颜色通道
+    img = cv2.imread(fengmian)
+    img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # cv2默认为bgr顺序
+    h, w, _ = img.shape #返回height，width，以及通道数，不用所以省略掉
+    
+### cv2如果要读取4通道的rgba数据，要加-1表示读到最后一位，不然的话平常只会读前三维
+    cv2.imread(img, -1)
+    
+### cv2裁剪坐标
+    cropped = img[0:128, 0:512]  # 裁剪坐标为[y0:y1, x0:x1]，先width后height
+    
+### cv2图片简单拼接 hconcat vconcat函数使用
+    img =cv2.imread(file_path[i])
+    img=cv2.hconcat([img,img,img])#水平拼接
+    img=cv2.vconcat([img,img,img])#垂直拼接
+    
+### 用np.concatenate去拼接图片
+    np.concatenate((image1, image2), axis=1) 
+    axis=0表示只剩一列，axis=1表示只剩一行
+    
+
