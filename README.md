@@ -426,8 +426,22 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     img=cv2.hconcat([img,img,img])#水平拼接
     img=cv2.vconcat([img,img,img])#垂直拼接
     
-### 用np.concatenate去拼接图片
-    np.concatenate((image1, image2), axis=1) 
-    axis=0表示只剩一列，axis=1表示只剩一行
+### cv2用np.concatenate去拼接图片
+    np.concatenate((img, img, img), axis=1) 
+    axis=0表示只剩一列，axis=1表示只剩一行，注意这里！里面是括号，tuple元组的形式
     
+### cv2获取图像的三通道，并且写视频cv2.VideoWriter()
+    fourcc = cv2.VideoWriter_fourcc(*'MJPG')
+    w, h, c = test_img.shape
+    video_writer = cv2.VideoWriter(save_name, fourcc, fps, (h, w))
+    
+    for img in imgs:
+        if img[-3:] != 'jpg' and img[-3:] != 'png':
+            continue
+        imgname = os.path.join(imgs_dir, img)
+        frame = cv2.imread(imgname, -1)
+        video_writer.write(frame)
+
+    video_writer.release()
+
 
