@@ -404,7 +404,11 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 ### linux下解压7z
     sudo apt-get install p7zip-full
     7za x filename.7z
-    
+
+### python 添加上级/下级目录到finding path中
+    sys.path.append('..')   # 添加上级目录
+    sys.path.append('code/')   # 添加下级code/目录
+
     
 ### cv2在图片中添加文字
     # 各参数依次是：照片/添加的文字/左上角坐标/字体/字体大小/颜色/字体粗细
