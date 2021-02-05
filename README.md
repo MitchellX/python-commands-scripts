@@ -245,6 +245,9 @@ Taylor Swift videos:
     
 ## pip install xxx 太慢
     pip install xxx -i https://pypi.tuna.tsinghua.edu.cn/simple
+    
+### 使用ipdb调试
+    python -m ipdb your_code.py
 
 
 ## du查看目录大小，df查看磁盘使用情况。
@@ -451,3 +454,9 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 ### python调用shell命令
     import os
     os.system("cmd")
+    
+    
+### Python 随机数生成
+    import random
+    x = random.randint(0,9)
+    
