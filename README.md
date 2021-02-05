@@ -448,4 +448,6 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 
     video_writer.release()
 
-
+### python调用shell命令
+    import os
+    os.system("cmd")
