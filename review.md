@@ -18,8 +18,8 @@ State management issue. The author proposes a mechanism that will enable dynamic
 + threads are actually a more appropriate abstraction for high-concurrency servers. Because (1) the concurrency in modern servers results from concurrent requests that are largely independent. (2) the code that handles each request is usually sequential.
 + the overhead of cleaning up task states after exceptions and after normal termination is simpler in a threaded system, since the thread stack naturally tracks the live state for that task.
 + the author designs a compiler supporting for threads
-> Dynamic Stack Growth mechanism allows the size of the stack to be adjusted at run time.
-> Compilers could easily purge unnecessary state from the stack before making function calls.
+    - Dynamic Stack Growth mechanism allows the size of the stack to be adjusted at run time.
+    - Compilers could easily purge unnecessary state from the stack before making function calls.
 + evaluation results seems convincing.
 
 ## Weakness：
