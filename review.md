@@ -1,4 +1,4 @@
-Summary：
+## Summary：
 This paper mainly compares two different system design in high-concurrency scenarios. The author argued that thread-based systems are not lower than even-based systems, and sometimes outperform in high-concurrency scenarios with the specific design and implementation of compiler. In addition, author in this paper responses to the historical Criticism and clarifies the problems in many domains, like performance, control flow, synchronization, state management, and scheduling. The quantitative results show that thread-based systems can achieve similar or even higher performance with respect to even-based systems.
 
 ### problems isn’t inherent to the threading paradigm
@@ -6,8 +6,11 @@ The claimed strengths of events over threads and show that the weaknesses of thr
 
 ### response to criticism of threads
 Performance issue. Because of poor thread implementations with respect to high concurrency. None of the currently available thread packages were designed for both high concurrency and blocking operations, and thus it is not surprising that they perform poorly. two sources of overhead are the presence of operations that are O(n) in the number of threads. and high context switch overhead when compared with events.
+
 Control Flow issue. Complicated control flow patterns are rare in practice. In most cases, the control flow patterns used by these applications fell into three simple categories: call/return, parallel calls, and pipelines. All of these patterns can be expressed more naturally with threads.
+
 Synchronization issue. Cooperative thread systems can reap the same benefits in synchronization.
+
 State management issue. The author proposes a mechanism that will enable dynamic stack growth. In addition, thread systems provide automatic state management via the call stack, and this mechanism can allow programmers to be wasteful while even-based systems need manual effort.
 
 ## Strength：
@@ -18,8 +21,8 @@ State management issue. The author proposes a mechanism that will enable dynamic
 + threads are actually a more appropriate abstraction for high-concurrency servers. Because (1) the concurrency in modern servers results from concurrent requests that are largely independent. (2) the code that handles each request is usually sequential.
 + the overhead of cleaning up task states after exceptions and after normal termination is simpler in a threaded system, since the thread stack naturally tracks the live state for that task.
 + the author designs a compiler supporting for threads
-    - Dynamic Stack Growth mechanism allows the size of the stack to be adjusted at run time.
-    - Compilers could easily purge unnecessary state from the stack before making function calls.
+    + Dynamic Stack Growth mechanism allows the size of the stack to be adjusted at run time.
+    + Compilers could easily purge unnecessary state from the stack before making function calls.
 + evaluation results seems convincing.
 
 ## Weakness：
