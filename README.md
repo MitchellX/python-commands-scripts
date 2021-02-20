@@ -302,6 +302,10 @@ basename是指去掉 .mp4后的base名词
     landmark_txt = os.path.split(image_path)[1][:-3] + 'txt'
     upper_folder = os.path.split(os.path.split(image_path)[0])[0]
     
+### str.split('-', 1 );  以'-'为分隔符，分隔成两个，避免出现多个'-'的情况
+
+### str.rsplit('-', 1), 从后外前开始分割，用法和上面的一致
+    
     
 # JD Jupyter
     打开ssh端口     bash ~/notespace/xmc
@@ -393,7 +397,7 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     arr_var = np.var(array)求方差
     arr_std = np.std(array,ddof=1)求标准差
 
-### str.split('-', 1 );  以'-'为分隔符，分隔成两个，避免出现多个'-'的情况
+
 
 ### 计算欧氏距离Euclidean distance
 
