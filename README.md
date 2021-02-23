@@ -99,7 +99,7 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
 
 ## update--(git强制覆盖)：
     git fetch --all
-    git reset --hard origin/master
+    git reset --hard origin/main
     git pull
     
 然后有两种方法来把你的代码和远程仓库中的代码合并
@@ -115,7 +115,7 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
 
 # git强制覆盖本地命令（单条执行）：
 
-    git fetch --all && git reset --hard origin/master && git pull
+    git fetch --all && git reset --hard origin/main && git pull
 
 
  git 删除远程分支上的某次提交
