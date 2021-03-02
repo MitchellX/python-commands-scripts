@@ -421,6 +421,13 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     # 各参数依次是：照片/添加的文字/左上角坐标/字体/字体大小/颜色/字体粗细
     cv2.putText(I,'there 0 error(s):',(50,150),cv2.FONT_HERSHEY_COMPLEX,6,(0,0,255),25)
     
+### PIL在图片中添加文字（小字体）
+具体请看文件：PIL_draw.py
+    fontsize = 8
+    font = ImageFont.truetype("arial.ttf", fontsize)
+    draw.text((x, y), str(cnt), fill=(0, 255, 255), font=font)  # 利用ImageDraw的内置函数，在图片上写入文字
+
+    
 ### cv2.imread()读取通道顺序，以及转换颜色通道
     img = cv2.imread(fengmian)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # cv2默认为bgr顺序
