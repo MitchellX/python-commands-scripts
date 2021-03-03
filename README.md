@@ -323,6 +323,9 @@ basename是指去掉 .mp4后的base名词
 
     ln -s /usr/bin/python3.6这是你想要指向的版本号 /usr/bin/python
     
+    ln [参数][源文件或目录][目标文件或目录]
+    ln -s src/ ./
+    
 ## 想更新最新版软件
 
     /etc/apt/sources.list
