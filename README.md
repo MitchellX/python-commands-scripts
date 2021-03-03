@@ -436,6 +436,9 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB) # cv2默认为bgr顺序
     h, w, _ = img.shape #返回height，width，以及通道数，不用所以省略掉
     
+### np.array的RGB形式，用cv2去写BGR
+    cv2.imwrite('test2.jpg', img[..., ::-1])
+    
 ### cv2如果要读取4通道的rgba数据，要加-1表示读到最后一位，不然的话平常只会读前三维
     cv2.imread(img, -1)
     
