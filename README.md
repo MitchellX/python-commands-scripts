@@ -4,6 +4,7 @@ This repository aims to record some frequently-used commands, including Linux an
 
 # Linux Common Command
     cd - 返回上次的目录
+    
   
 ## 从YouTube下载视频
     !pip3 install youtube-dl ffmpeg-python
@@ -49,7 +50,17 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     
 ### 传输多个文件夹
     scp -r root@192.168.1.104:/usr/local/nginx/html/webs/\{index,json\} ./
+    
+### 查看系统的版本
+    centOS：
+    cat /etc/redhat-release
+    Ubuntu:
+    lsb_release -a
+    
+### 查看系统cpu型号
 
+    cat /proc/cpuinfo
+    
     
 ## linux tar (打包.压缩.解压缩)命令说明 | tar如何解压文件到指定的目录？
 
