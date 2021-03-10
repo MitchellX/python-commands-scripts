@@ -505,5 +505,7 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 6）在“导入数据”对话框里，直接点确定
 
 
-    
+### pd.read_csv()中文乱码问题
+    data = pd.read_csv('sample.csv', encoding='GB18030')
+
     
