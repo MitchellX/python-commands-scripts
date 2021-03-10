@@ -478,6 +478,11 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
         video_writer.write(frame)
 
     video_writer.release()
+    
+### cv2读取带有中文的文件路径
+    # cv2读有中文路径的图片
+    img = cv2.imdecode(np.fromfile(image, dtype=np.uint8), -1)
+
 
 ### python调用shell命令
     import os
