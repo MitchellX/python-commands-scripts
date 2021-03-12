@@ -513,4 +513,9 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 ### pd.read_csv()中文乱码问题
     data = pd.read_csv('sample.csv', encoding='GB18030')
 
-    
+### 对list进行切片
+    L = ['Adam', 'Lisa', 'Bart', 'Paul', 'a', 'b']
+    print(L[::2])
+    output: ['Adam', 'Bart', 'a']
+    print(L[1::2])      
+    output: ['Lisa', 'Paul', 'b']
