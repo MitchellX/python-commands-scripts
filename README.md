@@ -519,3 +519,6 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     output: ['Adam', 'Bart', 'a']
     print(L[1::2])      
     output: ['Lisa', 'Paul', 'b']
+    
+### list双重中括号，可以任意点索引
+    get_landmark[[52, 53, 54, 55, 56, 61, 66, 88]]
