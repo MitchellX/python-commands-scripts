@@ -522,3 +522,12 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     
 ### list双重中括号，可以任意点索引
     get_landmark[[52, 53, 54, 55, 56, 61, 66, 88]]
+
+### 用numpy 存储和读取字典
+    for filesName in filesNames:
+        dictionary[filesName] = '{:0>4d}'.format(i)
+        i += 1
+    np.save("name_diction.npy", dictionary)
+
+    read_dic = np.load('name_diction.npy', allow_pickle=True).item()
+    print(read_dic)
