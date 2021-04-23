@@ -259,6 +259,10 @@ Taylor Swift videos:
     
 ### 使用ipdb调试
     python -m ipdb your_code.py
+    
+或者侵入式调试，可以进入os.system('命令')
+    import ipdb
+    ipdb.set_trace()
 
 
 ## du查看目录大小，df查看磁盘使用情况。
