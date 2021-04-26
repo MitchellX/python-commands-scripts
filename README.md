@@ -454,6 +454,9 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     
 ### np.array的RGB形式，用cv2去写BGR
     cv2.imwrite('test2.jpg', img[..., ::-1])
+或者这样写，意思主要是将RGB三通道逆序：
+
+    img[:, :, ::-1]
     
 ### cv2如果要读取4通道的rgba数据，要加-1表示读到最后一位，不然的话平常只会读前三维
     cv2.imread(img, -1)
