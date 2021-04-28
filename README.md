@@ -539,3 +539,8 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 
     read_dic = np.load('name_diction.npy', allow_pickle=True).item()
     print(read_dic)
+
+### windows查找文件夹下所有文件的内容
+    findstr /s /i "string" *.*  
+上面的命令表示，当前目录以及当前目录的所有子目录下的所有文件中查找"string"这个字符串。
+
