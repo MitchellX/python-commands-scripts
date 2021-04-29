@@ -116,6 +116,13 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
 删除github远程分支，分支名前的冒号代表删除。
 
     git push origin :[branch name]
+    
+## git pull 取回远程分支
+ 
+若只想取回某一部分，则用：
+    
+    git pull [repo的website地址] [branch name]
+    
 ## download：
     git clone https://github.com/MitchellX/testImage.git
     
