@@ -571,3 +571,23 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     findstr /s /i "string" *.*  
 上面的命令表示，当前目录以及当前目录的所有子目录下的所有文件中查找"string"这个字符串。
 
+### pandas读取csv格式文件
+    import pandas as pd
+
+    df = pd.read_csv('board.csv')
+    print(len(df))
+    print(df.head())
+    # read the title of dataFrame
+    header = df.columns.values.tolist()
+    print(header)
+
+
+
+    for i in range(len(df)):
+        print(df[header[0]][i])
+        print(df[header[1]][i])
+        print(df[header[2]][i])
+        print(df[header[3]][i])
+        print(df[header[4]][i])
+
+
