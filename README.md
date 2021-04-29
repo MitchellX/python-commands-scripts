@@ -98,7 +98,7 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     git branch -r 查看远程分支
     git branch -a 查看所有分支
 
-## 创建分支
+## 创建分支并切换到新的分支
     git branch [branch name]
     git checkout [branch name] 切换到新的分支
 可以一条命令执行
