@@ -93,19 +93,39 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
 
 # Git Command
 
+## 查看不同分支操作（红色表示远程仓库的
+    git branch 查看本地分支
+    git branch -r 查看远程分支
+    git branch -a 查看所有分支
+
+## 创建分支
+    git branch [branch name]
+    git checkout [branch name] 切换到新的分支
+可以一条命令执行
+
+    git checkout -b [branch name] 创建+切换分支
+    
+## 将新分支推送到github
+    git push origin [branch name]
+    
+## 分支的删除
+删除本地分支
+
+    git branch -d [branch name]
+    
+删除github远程分支，分支名前的冒号代表删除。
+
+    git push origin :[branch name]
 ## download：
     git clone https://github.com/MitchellX/testImage.git
     
-无用的：
-    mkdir yourFileName
-    cd /yourFileName
-    git init
-
 ## upload：
     git add .        （注：别忘记后面的.，此操作是把Test文件夹下面的文件都添加进来
     git commit  -m  "提交信息"  （注：“提交信息”里面换成你需要，如“first commit”）
     git push -u origin master   （注：此操作目的是把本地仓库push到github上面，此步骤需要你输入帐号和密码）
-    ## 一条指令完成
+
+一条指令完成
+
     git add . && git commit -m "update" && git push
 
 ## update--(git强制覆盖)：
