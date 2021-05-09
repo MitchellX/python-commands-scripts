@@ -231,6 +231,10 @@ https://blog.csdn.net/u011630575/article/details/48288663
 
 ## make cmake 装完包记得 更新一下
     sudo make install
+    
+## 禁止代理
+    unset https_proxy
+    unset http_proxy
 
 ## sudo apt-get install 包之前记得更新源
     sudo apt-get update
