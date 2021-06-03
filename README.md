@@ -593,5 +593,9 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
         print(df[header[2]][i])
         print(df[header[3]][i])
         print(df[header[4]][i])
+ 
+### 向量相乘维度对不上(1920,1080,3) * (1920,1080) 
+    mask[:, :, np.newaxis]
+    np.expand_dims(x, 2)
 
 
