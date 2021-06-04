@@ -597,5 +597,10 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 ### 向量相乘维度对不上(1920,1080,3) * (1920,1080) 
     mask[:, :, np.newaxis]
     np.expand_dims(x, 2)
+    
+### ffmpeg音频格式转换
+    ffmpeg -i input.m4a -acodec pcm_s16le -ac 1 -ar 8000 output.wav
+
+
 
 
