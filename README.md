@@ -61,6 +61,15 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
 
     cat /proc/cpuinfo
     
+### 查看Linux系统型号
+Ubuntu：
+
+    lsb_release -a
+    uname -a
+centOS：
+
+    cat /etc/redhat-release
+    rpm -q centos-release
     
 ## linux tar (打包.压缩.解压缩)命令说明 | tar如何解压文件到指定的目录？
 
