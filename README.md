@@ -618,5 +618,19 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     for i in `ls`;do if [ -d $i/.ipynb_checkpoints ];then echo $i; fi; done
     rm -rf M030_angry_3_003/.ipynb_checkpoints/
 
+### ffmpeg 将视频拆帧
+    ffmpeg -i video.avi frames_%05d.jpg
 
+### ffmpeg 将图片合成视频
+    ffmpeg -i M030_angry_3_001/fake_B_%06d.jpg -vcodec mpeg4 test.avi
+完整版本：
+    
+    ffmpeg -y -r 25 -i M030_angry_3_001/fake_B_%06d.jpg -i audio.mp3 -vcodec mpeg4 test.avi
+    
+    -y 表示覆盖原视频
+    -r 25 表示帧数
+    -i M030_angry_3_001/fake_B_%06d.jpg 表示要合成的图片的路径
+    -i audio.mp3 表示要添加的音频
+    
+    
 
