@@ -609,6 +609,11 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     
 ### ffmpeg音频格式转换
     ffmpeg -i input.m4a -acodec pcm_s16le -ac 1 -ar 8000 output.wav
+### strip() 和 split()函数
+    line.strip().split()
+    strip() 方法用于移除字符串头尾指定的字符（默认为空格）或字符序列。注意：该方法只能删除开头或是结尾的字符，不能删除中间部分的字符。
+    split() 默认为所有的空字符，包括空格、换行(\n)、制表符(\t)等
+
 
 
 
