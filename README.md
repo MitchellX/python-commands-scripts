@@ -632,5 +632,8 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     -i M030_angry_3_001/fake_B_%06d.jpg 表示要合成的图片的路径
     -i audio.mp3 表示要添加的音频
     
+### linux 创建多级目录
+    mkdir -p
+    
     
 
