@@ -635,5 +635,8 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 ### linux 创建多级目录
     mkdir -p
     
+### virtualenv 创建新的虚拟环境
+    virtualenv atvg -p python3.6
+    
     
 
