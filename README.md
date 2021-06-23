@@ -655,5 +655,9 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     np.save('test.npy',a)
     
     a=np.load('test.npy')
+    
+### 看音频的sample_rate
+    import scipy.id.wavefile as wavfile
+    sample_rate,signal=wavfile.read('stop.wav')
 
 
