@@ -643,5 +643,17 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 ### virtualenv 创建新的虚拟环境
     virtualenv atvg -p python3.6
     
+### .pkl文件的读取、生成
+    with open(name + '.pkl', 'wb') as f:
+        pickle.dump(data, f)    #这个data也可以是list
     
+    with open(file_path, 'rb') as f:           
+        file = pickle.load(f)
+
+### .npy文件的读取、生成
+    a=np.arange(5)
+    np.save('test.npy',a)
+    
+    a=np.load('test.npy')
+
 
