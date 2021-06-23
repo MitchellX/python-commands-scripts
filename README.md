@@ -607,8 +607,6 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     mask[:, :, np.newaxis]
     np.expand_dims(x, 2)
     
-### ffmpeg音频格式转换
-    ffmpeg -i input.m4a -acodec pcm_s16le -ac 1 -ar 8000 output.wav
 ### strip() 和 split()函数
     line.strip().split()
     strip() 方法用于移除字符串头尾指定的字符（默认为空格）或字符序列。注意：该方法只能删除开头或是结尾的字符，不能删除中间部分的字符。
@@ -617,6 +615,13 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 ### 删除多的.ipy文件夹
     for i in `ls`;do if [ -d $i/.ipynb_checkpoints ];then echo $i; fi; done
     rm -rf M030_angry_3_003/.ipynb_checkpoints/
+
+### ffmpeg音频格式转换
+    ffmpeg -i input.mp3 output.wav
+    ffmpeg -i input.m4a -acodec pcm_s16le -ac 1 -ar 8000 output.wav
+
+## ffmpeg视频分出音频
+    ffmpeg -i input.mp4 output.wav
 
 ### ffmpeg 将视频拆帧
     ffmpeg -i video.avi frames_%05d.jpg
