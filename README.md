@@ -660,4 +660,7 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     import scipy.id.wavefile as wavfile
     sample_rate,signal=wavfile.read('stop.wav')
 
+### Linux下的数字排序
+1、2、10 排序后结果是 1、10、2。如果按照人为逻辑则是 1、2、10
 
+    ls -lv
