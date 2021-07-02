@@ -413,6 +413,8 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 
     tree /f>list.txt
     
+### 将ls展示内容保存
+    ls -v > list.txt    
     
 ## glob.glob(*) 类似正则表达式一样的，找寻目录
     a = glob.glob('*')
