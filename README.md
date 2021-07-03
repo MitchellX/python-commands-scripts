@@ -666,3 +666,9 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 1、2、10 排序后结果是 1、10、2。如果按照人为逻辑则是 1、2、10
 
     ls -lv
+    
+### argparse模块中的action参数
+store_true就代表着一旦有这个参数，做出动作“将其值标为True”，也就是没有时，默认状态下其值为False。反之亦然，store_false也就是默认为True，一旦命令中有此参数，其值则变为False。
+
+    parser.add_argument('--lstm', action='store_true')
+    
