@@ -672,3 +672,7 @@ store_true就代表着一旦有这个参数，做出动作“将其值标为True
 
     parser.add_argument('--lstm', action='store_true')
     
+### 查看CUDA版本
+    cat /usr/local/cuda/version.txt
+    nvcc --version
+    
