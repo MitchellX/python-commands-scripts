@@ -705,4 +705,7 @@ https://blog.csdn.net/superjunenaruto/article/details/110100781
 ### Linux权限修改
     sudo chmod 777 ××× （每个人都有读和写以及执行的权限）
     
+### Linux重启命令
+    reboot 需要root用户
+    shutdown -r now
  
