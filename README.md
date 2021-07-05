@@ -696,3 +696,6 @@ https://blog.csdn.net/ywdll/article/details/103619130
 ### Linux用户管理
 ubuntu 创建用户 删除用户 切换用户 修改密码 管理员权限
 https://blog.csdn.net/superjunenaruto/article/details/110100781
+
+### Linux权限修改
+    sudo chmod 777 ××× （每个人都有读和写以及执行的权限）
