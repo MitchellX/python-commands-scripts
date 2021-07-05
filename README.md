@@ -675,4 +675,20 @@ store_true就代表着一旦有这个参数，做出动作“将其值标为True
 ### 查看CUDA版本
     cat /usr/local/cuda/version.txt
     nvcc --version
-    
+
+### 挂载硬盘
+挂载大于2T的硬盘时候，要用GPT的命令，参考这个链接的第二条
+https://www.thegeekstuff.com/2012/08/2tb-gtp-parted/
+
+挂载小于2T（非服务器）的硬盘，参考这个就足够：
+https://cloud.tencent.com/developer/article/1746763
+
+### anaconda多用户
+anaconda多用户的安装和user添加可以参考这个链接
+https://blog.csdn.net/codedancing/article/details/103936542
+
+### cuda和cudnn的安装
+Ubuntu 18.04安装CUDA（版本10.2）和cuDNN，参考：
+https://blog.csdn.net/ywdll/article/details/103619130
+
+报错：Failed to initialize NVML: Driver/library version mismatch。cuda和gpu的内核版本不一致：
