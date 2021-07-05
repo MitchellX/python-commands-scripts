@@ -692,3 +692,7 @@ Ubuntu 18.04安装CUDA（版本10.2）和cuDNN，参考：
 https://blog.csdn.net/ywdll/article/details/103619130
 
 报错：Failed to initialize NVML: Driver/library version mismatch。cuda和gpu的内核版本不一致：
+
+### Linux用户管理
+ubuntu 创建用户 删除用户 切换用户 修改密码 管理员权限
+https://blog.csdn.net/superjunenaruto/article/details/110100781
