@@ -675,6 +675,8 @@ store_true就代表着一旦有这个参数，做出动作“将其值标为True
 ### 查看CUDA版本
     cat /usr/local/cuda/version.txt
     nvcc --version
+### 查看NVIDIA版本
+    cat /proc/driver/nvidia/version
 
 ### 挂载硬盘
 挂载大于2T的硬盘时候，要用GPT的命令，参考这个链接的第二条
