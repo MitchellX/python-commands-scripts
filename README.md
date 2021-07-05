@@ -685,6 +685,9 @@ https://www.thegeekstuff.com/2012/08/2tb-gtp-parted/
 挂载小于2T（非服务器）的硬盘，参考这个就足够：
 https://cloud.tencent.com/developer/article/1746763
 
+自动挂载（重启后有效）
+https://www.jianshu.com/p/336758411dbf
+
 ### anaconda多用户
 anaconda多用户的安装和user添加可以参考这个链接
 https://blog.csdn.net/codedancing/article/details/103936542
@@ -701,3 +704,5 @@ https://blog.csdn.net/superjunenaruto/article/details/110100781
 
 ### Linux权限修改
     sudo chmod 777 ××× （每个人都有读和写以及执行的权限）
+    
+ 
