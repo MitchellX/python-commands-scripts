@@ -708,4 +708,6 @@ https://blog.csdn.net/superjunenaruto/article/details/110100781
 ### Linux重启命令
     reboot 需要root用户
     shutdown -r now
- 
+### Linux系统登录新建用户时，shell开头为$
+Linux系统登录新建用户时，shell开头为$，不显示用户名和路径的解决办法
+https://blog.csdn.net/Du_wood/article/details/84914759?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control
