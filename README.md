@@ -711,3 +711,48 @@ https://blog.csdn.net/superjunenaruto/article/details/110100781
 ### Linux系统登录新建用户时，shell开头为$
 Linux系统登录新建用户时，shell开头为$，不显示用户名和路径的解决办法
 https://blog.csdn.net/Du_wood/article/details/84914759?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromMachineLearnPai2%7Edefault-1.control
+
+
+
+
+
+
+
+# pytorch
+### np转tensor
+    a = torch.from_numpy()  浮点数是64位的
+    a.float()               变成32位的
+    
+    torch.Tensor() 32位的
+    
+    
+ ### torch.tensor 和torch.Tensor
+    torch.Tensor 是torch.FloatTensor的别名，32位的
+    torch.tensor 根据输入类型决定类型。
+ 
+ ### 扩大tensor张量
+    torch.Tensor.expand(shape)  相同填充
+    
+    
+### 自定义一个loss function
+    class My_mse_loss(nn.Module):
+        def __init__(self):
+            super(My_mse_loss, self).__init__()
+            self.mse_loss_fn = nn.MSELoss(size_average=False, reduce=False)
+            self.weight = np.ones([136])
+            self.weight[96:] = self.weight[96:] + 1
+            self.weight = torch.from_numpy(self.weight).cuda()
+            # self.weight = torch.Tensor(self.weight).cuda()
+
+
+        def forward(self, infer_lm, gt_lm):
+            loss = self.mse_loss_fn(infer_lm, gt_lm)
+            shape = gt_lm.shape
+            self.weight = self.weight.expand(shape)
+            loss_final = loss * self.weight
+            return loss_final
+      
+      
+ 
+ 
+ 
