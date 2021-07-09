@@ -741,16 +741,16 @@ https://blog.csdn.net/Du_wood/article/details/84914759?utm_medium=distribute.pc_
             self.mse_loss_fn = nn.MSELoss(size_average=False, reduce=False)
             self.weight = np.ones([136])
             self.weight[96:] = self.weight[96:] + 1
-            self.weight = torch.from_numpy(self.weight).cuda()
-            # self.weight = torch.Tensor(self.weight).cuda()
-
+            self.weight = torch.Tensor(self.weight).cuda()
 
         def forward(self, infer_lm, gt_lm):
             loss = self.mse_loss_fn(infer_lm, gt_lm)
             shape = gt_lm.shape
             self.weight = self.weight.expand(shape)
             loss_final = loss * self.weight
+            loss_final = torch.mean(loss_final)
             return loss_final
+
       
       
  
