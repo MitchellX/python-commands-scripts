@@ -404,7 +404,10 @@ basename是指去掉 .mp4后的base名词
 之后想从清华源下载的话，就用-i 指定路径：
     
     pip install virtualenv -i https://pypi.tuna.tsinghua.edu.cn/simple
-    
+
+
+### virtualenv 创建新的虚拟环境
+virtualenv atvg -p python3.6  
     
     
 ## 生成文件夹树形目录
@@ -641,9 +644,7 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     
 ### linux 创建多级目录
     mkdir -p
-    
-### virtualenv 创建新的虚拟环境
-    virtualenv atvg -p python3.6
+   
     
 ### .pkl文件的读取、生成
     with open(name + '.pkl', 'wb') as f:
