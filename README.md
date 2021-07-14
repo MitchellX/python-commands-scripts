@@ -761,7 +761,10 @@ https://blog.csdn.net/Du_wood/article/details/84914759?utm_medium=distribute.pc_
             loss_final = torch.mean(loss_final)
             return loss_final
 
-      
+### 查看网络的值
+        for parameters in self.generator.parameters():
+            print parameters
+            break
       
  
  
