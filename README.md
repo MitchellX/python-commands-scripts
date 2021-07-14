@@ -633,6 +633,15 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 
 ### ffmpeg 将图片合成视频
     ffmpeg -i M030_angry_3_001/fake_B_%06d.jpg -vcodec mpeg4 test.avi
+
+### ffmpeg 将图片合成视频+音频
+    ffmpeg -i M030_angry_3_001/fake_B_%06d.jpg -i audio.mp3 -vcodec mpeg4 test.avi
+    
+### 换MP4格式也可以
+输出的时候，编码器换下
+    
+    -vcodec libx264 输出.mp4
+
 完整版本：
     
     ffmpeg -y -r 25 -i M030_angry_3_001/fake_B_%06d.jpg -i audio.mp3 -vcodec mpeg4 test.avi
