@@ -621,6 +621,31 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     for i in `ls`;do if [ -d $i/.ipynb_checkpoints ];then echo $i; fi; done
     rm -rf M030_angry_3_003/.ipynb_checkpoints/
 
+### ffmpeg合并音频和视频(没有声音)
+    ffmpeg -i 4_concate.avi -i all.mp3 -c:v copy -c:a aac -strict experimental output.mp4
+    
+### ffmpeg合并音频和视频(视频有声音)
+audio音频替换video中的音频
+
+    ffmpeg -i video.mp4 -i audio.wav -c:v copy -c:a aac -strict experimental -map 0:v:0 -map 1:a:0 output.mp4
+
+
+### ffmpeg拼接多个音频
+1.新建文本文档  list.txt  ，包含要拼接的音频，格式如：
+
+    file '1.mp3'
+    file '2.mp3'
+2.可以用一下命令生产这个list
+    
+    ls *.mp3 > list.txt
+    
+3.拼接，命令如：
+
+    ffmpeg -f concat -i list.txt -c copy 007.mp3
+
+
+
+
 ### ffmpeg音频格式转换
     ffmpeg -i input.mp3 output.wav
     ffmpeg -i input.m4a -acodec pcm_s16le -ac 1 -ar 8000 output.wav
