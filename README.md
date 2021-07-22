@@ -790,7 +790,10 @@ https://blog.csdn.net/Du_wood/article/details/84914759?utm_medium=distribute.pc_
         for parameters in self.generator.parameters():
             print parameters
             break
+
       
- 
+ ### Linux 创建删除用户
+    sudo useradd -m username -d /export4/username -s /bin/bash
+    userdel username
  
  
