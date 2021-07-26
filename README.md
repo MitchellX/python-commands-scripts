@@ -796,4 +796,6 @@ https://blog.csdn.net/Du_wood/article/details/84914759?utm_medium=distribute.pc_
     sudo useradd -m username -d /export4/username -s /bin/bash
     userdel username
  
+ ### linux搜索命令
+    find ./ -name *fsgan*
  
