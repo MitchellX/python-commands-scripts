@@ -798,4 +798,11 @@ https://blog.csdn.net/Du_wood/article/details/84914759?utm_medium=distribute.pc_
  
  ### linux搜索命令
     find ./ -name *fsgan*
+    
+### Python3 求最大/小值及索引值、位置 Numpy
+    list = [9, 12, 88, 14, 25]
+    max_list =  max(list) # 返回最大值
+    max_index = list.index(max(list))# 最大值的索引
+    # 最小的话 max换成min
+
  
