@@ -1,4 +1,4 @@
-Shared memory is on-chip
+Shared memory is on-chip  
 local memory is off-chip
 
 
