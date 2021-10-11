@@ -813,5 +813,14 @@ https://blog.csdn.net/Du_wood/article/details/84914759?utm_medium=distribute.pc_
     srun --pty --partition=1080ti-short --gres=gpu:1 --time=0-04:00:00 /bin/bash
     
     
+### pycharm 卡在 updating helpers / skeleton
+    cd /home/root/
+    cd ./.pycharm_helpers/
+    rm -rf check_all_test_suite.py
+    tar -xvzf helpers.tar.gz
+    
+或者:
+    例如C:\Program Files\JetBrains\PyCharm 2017.2.3这里面找到并且
+    删掉skeletons文件夹，重新启动再配置远程环境就好了
 
  
