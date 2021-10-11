@@ -809,6 +809,9 @@ https://blog.csdn.net/Du_wood/article/details/84914759?utm_medium=distribute.pc_
     FLOPS denotes the total number of floating point operations of the neural network in a forward propogation.
     FLOPs denotes the floating point operations per second.
     
+### allocate the GPU cluster in Gypsum
+    srun --pty --partition=1080ti-short --gres=gpu:1 --time=0-04:00:00 /bin/bash
+    
     
 
  
