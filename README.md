@@ -143,6 +143,9 @@ centOS：
 一条指令完成
 
     git add . && git commit -m "update" && git push
+    
+## 清除分支
+    git rm -r --cached .
 
 ## update--(git强制覆盖)：
     git fetch --all
