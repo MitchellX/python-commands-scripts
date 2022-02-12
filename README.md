@@ -322,6 +322,9 @@ Taylor Swift videos:
     screen -r 编号	          退出后再次登录某个会话。
     Ctrl+d或exit	             结束screen会话。
     
+    # "no screen to be resumed", but indeed exist
+    screen -d -r
+    
     # 强制结束一些，你结束不了的session
     screen -X -S [session # you want to kill] quit
 
