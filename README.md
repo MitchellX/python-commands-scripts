@@ -483,6 +483,8 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
     7za x filename.7z
 
 ### python 添加上级/下级目录到finding path中
+但是要记住这个代码要放在最上面
+
     sys.path.append('..')   # 添加上级目录
     sys.path.append('code/')   # 添加下级code/目录
 
