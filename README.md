@@ -830,5 +830,18 @@ https://blog.csdn.net/Du_wood/article/details/84914759?utm_medium=distribute.pc_
 或者:
     例如C:\Program Files\JetBrains\PyCharm 2017.2.3这里面找到并且
     删掉skeletons文件夹，重新启动再配置远程环境就好了
+    
+### store a dictionary
+
+    import json
+
+    with open('my_dict.json', 'w') as f:
+        json.dump(my_dict, f)
+
+    # elsewhere...
+
+    with open('my_dict.json') as f:
+        my_dict = json.load(f)
+
 
  
