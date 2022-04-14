@@ -31,11 +31,35 @@
 
     ./configure --prefix=/usr/local/mysql
 
+看到一下信息表示安装成功了!
+
+     Thank you for choosing MySQL!
+
+     Remember to check the platform specific part of the reference manual
+     for hints about installing MySQL on your platform.
+     Also have a look at the files in the Docs directory.
+     
 ## 配置2：把MySql安装到/usr/local/mysql 下,语言用utf8
 
     ./configure --prefix=/usr/local/mysql --with-charset=utf8 --with-extra-charset=all --enable-thread-safe-client --enable-local-infile 
     
 ## build
      make && make install
+
+## 拷贝安装my.cnf配置文件 ，这是MySql的最重要的配置文件，每次启动都会读这个文件 ，
+    cp support-files/my-medium.cnf /etc/my.cnf
+
+## 后续操作
+     cd /usr/local/mysql   //进入mysql目录
+     bin/mysql_install_db --user=mysql  //初始化数据库
+     chown -R root .  //设置安装根目录权限
+     chown -R mysql /usr/local/mysql/var //设置数据目录的权限
+     chgrp -R mysql
+     bin/mysqld_safe --user=mysql &  //以安全方式启动mysql，后面加一个&表示后台运行
+
+
+# netstat -ant  看到3306端品号,说明已启动
+
+mysqladmin shutdown 停止MySQL
 
 
