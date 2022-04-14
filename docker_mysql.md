@@ -66,3 +66,8 @@
      //这样就可以通过/etc/init.d/mysqld start|stop|restart来重启mysqll
      
      echo export PATH=$PATH:/usr/local/mysql/bin >> /etc/profile   //配置mysql环境变量
+     
+     source /etc/profile  //要让刚才的修改马上生效，需要执行此代码  
+
+
+
