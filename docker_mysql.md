@@ -49,17 +49,20 @@
 ## 拷贝安装my.cnf配置文件 ，这是MySql的最重要的配置文件，每次启动都会读这个文件 ，
     cp support-files/my-medium.cnf /etc/my.cnf
 
-## 后续操作
+## 初步配置mysql
      cd /usr/local/mysql   //进入mysql目录
      bin/mysql_install_db --user=mysql  //初始化数据库
      chown -R root .  //设置安装根目录权限
      chown -R mysql /usr/local/mysql/var //设置数据目录的权限
-     chgrp -R mysql
      bin/mysqld_safe --user=mysql &  //以安全方式启动mysql，后面加一个&表示后台运行
 
+     bin/mysqladmin -uroot password 123456  #在mysql首次正常启动情况下，更改root用户登录密码
+     bin/mysql -uroot -p              #输入此命令后，按回车会显示让你输入root密码
+     mysql> show databases;             #show一下你所有的数据库。
+     mysql> quit;                       #退出mysql
 
-# netstat -ant  看到3306端品号,说明已启动
-
-mysqladmin shutdown 停止MySQL
-
-
+## 把mysql加入到系统服务中
+     cp /usr/local/mysql/share/mysql/mysql.server /etc/init.d/mysqld  
+     //这样就可以通过/etc/init.d/mysqld start|stop|restart来重启mysqll
+     
+     echo export PATH=$PATH:/usr/local/mysql/bin >> /etc/profile   //配置mysql环境变量
