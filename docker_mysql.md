@@ -4,7 +4,9 @@
 
      docker run -it icomputer7/ancient-ubuntu-docker:jaunty /bin/bash
      apt-get update
-     apt-get install g++ gcc build-essential
+非常重要的library!
+
+     apt-get install g++ gcc build-essential cmake make libncurses5-dev
 
 ## 要退出终端，直接输入 exit:
      exit
@@ -32,5 +34,8 @@
 ## 配置2：把MySql安装到/usr/local/mysql 下,语言用utf8
 
     ./configure --prefix=/usr/local/mysql --with-charset=utf8 --with-extra-charset=all --enable-thread-safe-client --enable-local-infile 
+    
+## build
+     make && make install
 
 
