@@ -1,6 +1,14 @@
+## 下载对应版本的mysql source package 
+[MySQL :: Download MySQL Community Server (Archived Versions)](https://downloads.mysql.com/archives/community/)
 
 
+## check mysql文档, 找到对应的OS版本: 
+https://docs.oracle.com/cd/E19078-01/mysql/mysql-refman-5.1/installing.html#quick-install
+
+     比如本次我们要用的Linux操作系统是 ubuntu 9.04 (jaunty)
+     
 ## 创建容器以及安装相关lib
+https://github.com/iComputer7/ancient-ubuntu-docker
 
      docker run -it icomputer7/ancient-ubuntu-docker:jaunty /bin/bash
      apt-get update
