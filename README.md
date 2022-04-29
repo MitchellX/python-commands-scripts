@@ -47,6 +47,8 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     
     scp -r 要传的本地目录名     用户名@计算机IP或名称:远程路径
     scp -r /home/music/    root@ipAddress:/home/root/others/ 
+    # 指定端口
+    scp -P 7022 ./nyu_v2.zip tongping@keb310-useast.xttech.tech:/home/tongping/dataset/
     
 ### 传输多个文件夹
     scp -r root@192.168.1.104:/usr/local/nginx/html/webs/\{index,json\} ./
