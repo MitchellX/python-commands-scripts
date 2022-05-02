@@ -43,7 +43,7 @@ c.NotebookApp.notebook_dir = '/home/deepblue/xyf_work/' # 设置默认工作目�
 ssh -L [本地端口]:localhost:[远程端口] [远程用户名]@[远程IP] -p [ssh连接端口]
 
 例如
-`ssh -L 8155:localhost:8888  deepblue@192.168.31.104 -p 22`
+`ssh -L 8855:localhost:8899 tongping@keb310-useast.xttech.tech -p 7022`
 
 ## pycharm 配置
 pycharm中右上角, 点击configure server, http://localhost:8855
