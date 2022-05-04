@@ -848,4 +848,22 @@ https://blog.csdn.net/Du_wood/article/details/84914759?utm_medium=distribute.pc_
 ### docker copy
 
     sudo docker cp mysql-5.1.32-linux-x86_64-icc-glibc23.tar.gz xenodochial_mcnulty/:/home
- 
+    
+### plot matplot
+
+```
+import matplotlib.pyplot as plt
+
+#折线图
+x = [0,0.2,0.4,0.6,0.8]#点的横坐标
+k1 = [5.86, 7.03, 10.77, 13.55, 15.98]#线1的纵坐标
+k2 = [6.16, 8.59, 11.92, 14.43, 17.19]
+plt.plot(x,k1,'s-',color = 'r',label="with cache")#s-:方形
+plt.plot(x,k2,'o-',color = 'g',label="without cache")#o-:圆形
+plt.xlabel("p (probability)")#横坐标名字
+plt.ylabel("latency")#纵坐标名字
+plt.legend(loc = "best")#图例
+# plt.show()
+plt.savefig('test.png')
+```
+
