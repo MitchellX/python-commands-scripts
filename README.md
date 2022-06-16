@@ -415,7 +415,10 @@ basename是指去掉 .mp4后的base名词
 
 
 ### virtualenv 创建新的虚拟环境
-virtualenv atvg -p python3.6  
+
+    virtualenv --clear envs/test
+    source envs/test/bin/activate
+    deactivate
     
     
 ## 生成文件夹树形目录
