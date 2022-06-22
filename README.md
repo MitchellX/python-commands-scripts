@@ -870,3 +870,8 @@ plt.legend(loc = "best")#图例
 plt.savefig('test.png')
 ```
 
+### Linux 上查看cache大小, memory大小
+
+    getconf -a | grep CACHE
+    cat /proc/meminfo
+
