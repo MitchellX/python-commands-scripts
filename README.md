@@ -492,6 +492,11 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 
     sys.path.append('..')   # 添加上级目录
     sys.path.append('code/')   # 添加下级code/目录
+    
+    # 是在找不到当前目录下的文件, 就添加绝对路径.
+    import sys
+    sys.path.append("/home/tiger/bytegnn/python/bytegnn/ros_data")
+
 
     
 ### cv2在图片中添加文字
