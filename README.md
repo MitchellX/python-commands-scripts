@@ -874,4 +874,12 @@ plt.savefig('test.png')
 
     getconf -a | grep CACHE
     cat /proc/meminfo
+    
+### 其实在Nvidia驱动确定后, 可以装不同的CUDA version, 甚至在不同的conda envs下
+
+    conda create -n py37 python=3.7
+    conda activate py37
+    conda install pytorch torchvision torchaudio cudatoolkit=11.3 -c pytorch
+    conda install -c nvidia cuda
+
 
