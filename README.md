@@ -890,3 +890,6 @@ plt.savefig('test.png')
 ### conda清理没用的安装包
     
     conda clean -y -all //删除所有的安装包及cache
+    
+### du -lh排序
+    du -s * | sort -hr | head 选出排在前面的10个， du -s * | sort -hr| tail 选出排在后面的10个。
