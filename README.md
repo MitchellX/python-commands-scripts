@@ -893,3 +893,7 @@ plt.savefig('test.png')
     
 ### du -lh排序
     du -s * | sort -hr | head 选出排在前面的10个， du -s * | sort -hr| tail 选出排在后面的10个。
+    
+### C++ codes export python interface
+
+    https://pybind11.readthedocs.io/en/latest/classes.html
