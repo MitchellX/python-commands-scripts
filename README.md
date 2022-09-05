@@ -902,3 +902,17 @@ plt.savefig('test.png')
     
 ### find command 
     find ./ -name "mytest.*"
+
+### Environment
+
+You can build on your conda environment from the provided ```environment.yml```. Feel free to change the env name in the file.
+
+```bash
+conda env create -f environment.yml
+
+or
+
+conda env update --name myenv --file local.yml --prune
+// prune uninstalls dependencies which were removed from local.yml
+```
+
