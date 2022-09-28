@@ -192,6 +192,8 @@ https://blog.csdn.net/u011630575/article/details/48288663
     gpustat     最简单的
     watch -n 0.1 nvidia-smi   实时监控 -n设置间隔
     
+    lspci | grep -i vga
+    
 ## 释放GPU一直占用的显存
     fuser -v /dev/nvidia*   查看当前系统中GPU占用的线程
     nvidia-smi              也能查看pid
