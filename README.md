@@ -918,3 +918,7 @@ conda env update --name myenv --file local.yml --prune
 // prune uninstalls dependencies which were removed from local.yml
 ```
 
+### Unity Cluster
+    squeue --me
+    scancel job_id
+
