@@ -357,6 +357,10 @@ basename是指去掉 .mp4后的base名词
     username=$(basename $username) 去掉前置路径
     username=$(basename $username .jpg) 增加去掉后缀
 
+## 路径不存在, 创建路径
+    if not os.path.exists(args.dest):
+        os.mkdir(args.dest)
+
 
 ## splitext去掉后缀，basename去掉前置路径，python
     os.path.splitext()[0]
