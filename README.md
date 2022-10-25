@@ -706,6 +706,11 @@ audio音频替换video中的音频
     
     with open(file_path, 'rb') as f:           
         file = pickle.load(f)
+        
+### json文件的读取
+    with open(json_file, 'r') as f:
+    info = json.load(f)
+
 
 ### .npy文件的读取、生成
     a=np.arange(5)
