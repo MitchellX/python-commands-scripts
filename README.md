@@ -931,4 +931,10 @@ conda env update --name myenv --file local.yml --prune
 ### Unity Cluster
     squeue --me
     scancel job_id
+    
+### nn.ModuleList()
+    Holds submodules in a list.
+    self.blocks = nn.ModuleList(self.blocks)
+
+
 
