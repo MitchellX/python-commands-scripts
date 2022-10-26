@@ -940,5 +940,14 @@ conda env update --name myenv --file local.yml --prune
     Holds submodules in a list.
     self.blocks = nn.ModuleList(self.blocks)
 
+### tensor 的整数除法
+RuntimeError: Integer division of tensors using div or / is no longer supported, and in a future release div will perform true division as in Python 3. Use true_divide or floor_divide (// in Python) instead.
+
+Using floor division (//) will floor the result to the largest possible integer.
+Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Divisor) in stead.
+
+    For example: 3/4 = torch.true_divide(3, 4)
+
+
 
 
