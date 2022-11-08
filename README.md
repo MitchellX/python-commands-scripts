@@ -948,6 +948,14 @@ Using floor division (//) will floor the result to the largest possible integer.
 Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Divisor) in stead.
 
     For example: 3/4 = torch.true_divide(3, 4)
+    
+    
+## Convert a String representation of a Dictionary to a dictionary
+
+    >>> import ast
+    >>> ast.literal_eval("{'muffin' : 'lolz', 'foo' : 'kitty'}")
+    {'muffin': 'lolz', 'foo': 'kitty'}
+
 
 
 
