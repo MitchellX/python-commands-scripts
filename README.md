@@ -51,7 +51,14 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     scp -P 7022 ./nyu_v2.zip tongping@keb310-useast.xttech.tech:/home/tongping/dataset/
     
 ### 传输多个文件夹
+    2-0
     scp -r root@192.168.1.104:/usr/local/nginx/html/webs/\{index,json\} ./
+    
+    2-1 从本地文件复制多个文件到远程主机（多个文件使用空格分隔开）
+    先进入本地目录下，然后运行如下命令：
+    scp index.css json.js root@192.168.1.104:/usr/local/nginx/html/webs
+
+
     
 ### 查看系统的版本
     centOS：
