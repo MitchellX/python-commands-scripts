@@ -963,6 +963,8 @@ Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Diviso
     >>> ast.literal_eval("{'muffin' : 'lolz', 'foo' : 'kitty'}")
     {'muffin': 'lolz', 'foo': 'kitty'}
 
+### 用list可以将pytorch的generator variables变成一个可查看的list
+    list(model.modules())
 
 
 
