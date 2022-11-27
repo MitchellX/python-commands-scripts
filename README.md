@@ -895,6 +895,12 @@ plt.ylabel("latency")#纵坐标名字
 plt.legend(loc = "best")#图例
 # plt.show()
 plt.savefig('test.png')
+
+
+plt.imshow(img)
+plt.show()
+
+
 ```
 
 
