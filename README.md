@@ -909,6 +909,9 @@ plt.show()
     getconf -a | grep CACHE
     cat /proc/meminfo
     
+### Linux 上查看用户进程
+    ps -p <PID> -o user
+    
 ### 其实在Nvidia驱动确定后, 可以装不同的CUDA version, 甚至在不同的conda envs下
 
     conda create -n py37 python=3.7
@@ -971,6 +974,8 @@ Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Diviso
 
 ### 用list可以将pytorch的generator variables变成一个可查看的list
     list(model.modules())
+    
+    
 
 
 
