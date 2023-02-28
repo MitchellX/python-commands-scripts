@@ -58,6 +58,8 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     先进入本地目录下，然后运行如下命令：
     scp index.css json.js root@192.168.1.104:/usr/local/nginx/html/webs
 
+### more scps
+
 
     
 ### 查看系统的版本
