@@ -58,8 +58,16 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     先进入本地目录下，然后运行如下命令：
     scp index.css json.js root@192.168.1.104:/usr/local/nginx/html/webs
 
-### more scps
+### rsync
+    rsync -rvz -e 'ssh -p **22' --exclude='*.model' dir/ host:/dir
 
+    -a or --archive: archive mode, which preserves permissions, ownership, timestamps, and links.
+    -v or --verbose: verbose output, which displays the progress of the transfer.
+    -z or --compress: compresses the data during transfer, which can help to reduce the amount of data being transferred over the network.
+    -P or --partial --progress: shows the progress of the transfer and resumes partially transferred files.
+    -r recurse into directories
+    -e 使用 ssh 作为远程 shell，这样所有的东西都被加密
+    --exclude='*.out' ：排除匹配模式的文件，例如 *.out 或 *.c 等。
 
     
 ### 查看系统的版本
