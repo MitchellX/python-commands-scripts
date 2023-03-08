@@ -179,8 +179,9 @@ centOS：
 
 如果没有冲突，git push origin master，把你的改动推送到远程仓库中
 
-## delete:
-    git reset --hard HEAD^ 可以将本地的仓库回滚到上一次提交时的状态，HEAD^指的是上一次提交。
+## reset & revert 回滚到上个版本的代码
+    https://zhuanlan.zhihu.com/p/137856034
+    https://stackoverflow.com/questions/6084483/what-should-i-do-when-git-revert-aborts-with-an-error-message
 
 # git强制覆盖本地命令（单条执行）：
 
