@@ -68,6 +68,12 @@ Linux服务器之间传输：[点此](https://kernel.blog.csdn.net/article/detai
     -r recurse into directories
     -e 使用 ssh 作为远程 shell，这样所有的东西都被加密
     --exclude='*.out' ：排除匹配模式的文件，例如 *.out 或 *.c 等。
+    
+    要跳过已有传输可使用rsync：rsync -aWPu local root@host:remote，参数解释：
+    -a：档案模式，保留源文件的所有属性，并递归传输目录
+    -W：跳过增量传输算法，直接传输整个文件，在带宽较高时适用
+    -P：显示传输进度
+    -u：仅当源主机文件比目标主机中的文件更新时才传输
 
     
 ### 查看系统的版本
