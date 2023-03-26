@@ -993,7 +993,11 @@ Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Diviso
     list(model.modules())
     
     
-
+### 网页端的tensorboard使用与远程访问、端口转发
+    tensorboard --logdir=xmc_test_norm/ --port 8000 --bind_all
+    ssh -L 16006:127.0.0.1:6006 user@hostname
+    # 使用SSH将服务器的6006端口重定向到自己机器上来。其中16006:127.0.0.1代表自己机器上的16006号端口，6006是服务器上tensorboard使用的端口。
+    # https://blog.csdn.net/xg123321123/article/details/81153735
 
 
 
