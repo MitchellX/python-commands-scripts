@@ -999,5 +999,7 @@ Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Diviso
     # 使用SSH将服务器的6006端口重定向到自己机器上来。其中16006:127.0.0.1代表自己机器上的16006号端口，6006是服务器上tensorboard使用的端口。
     # https://blog.csdn.net/xg123321123/article/details/81153735
 
+### 通过pid查看代码参数
+    ps -p 2711389 -o cmd=
 
 
