@@ -1005,5 +1005,5 @@ Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Diviso
 ### print the last line of each file
     tail -n 1 <filename>
 
-
-
+### repeat downloading if some files fail
+    wget -nc -i file_list.txt
