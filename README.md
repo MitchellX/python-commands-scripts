@@ -1007,3 +1007,7 @@ Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Diviso
 
 ### repeat downloading if some files fail
     wget -nc -i file_list.txt
+    
+### mv all the file exclude *.tar     
+    mv source_directory/!(*.tar) destination_directory/
+
