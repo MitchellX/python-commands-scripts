@@ -512,6 +512,9 @@ windows下的CMD命令tree可以很方便的得到文件夹目录树
 ### pip 导出当前环境的所有包
     
     pip freeze > ./requirements.txt
+
+    # if pip freeze creates some weird path instead of the package version
+    pip list --format=freeze > requirements.txt
     
 ### linux下解压7z
     sudo apt-get install p7zip-full
