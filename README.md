@@ -1014,3 +1014,5 @@ Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Diviso
 ### mv all the file exclude *.tar     
     mv source_directory/!(*.tar) destination_directory/
 
+### To see the full command including the arguments using PID in linux
+    ps -p [pid] -o args=
