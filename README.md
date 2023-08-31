@@ -1014,5 +1014,9 @@ Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Diviso
 ### mv all the file exclude *.tar     
     mv source_directory/!(*.tar) destination_directory/
 
+### conda create & update env from yml file
+    conda env create -n ENVNAME --file requirements.yml
+    conda env update --file requirements.yml --prune
+
 ### To see the full command including the arguments using PID in linux
     ps -p [pid] -o args=
