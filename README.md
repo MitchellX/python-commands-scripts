@@ -1020,3 +1020,8 @@ Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Diviso
 
 ### To see the full command including the arguments using PID in linux
     ps -p [pid] -o args=
+
+## you can run all the command in the project root path after exporting the python path
+```
+export PYTHONPATH=$PYTHONPATH:$(pwd)
+```
