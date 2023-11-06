@@ -1025,3 +1025,21 @@ Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Diviso
 ```
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 ```
+
+
+### Create a pull request in command line
+```
+git checkout -b new-feature-branch
+git add .
+git commit -m "A descriptive message about your changes"
+git push origin new-feature-branch
+```
+
+
+### solve push conflicts
+    git pull
+    
+    git config pull.rebase false
+    git reset --hard HEAD@{1}
+
+
