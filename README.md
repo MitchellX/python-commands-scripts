@@ -1048,17 +1048,25 @@ git push origin new-feature-branch
 2. push your own codes even without permission
 ```
 
-```
+
 1. fork the desired project.
 2. clone the fork into your local repo
-    git clone https://github.com/MitchellX/flash-attention.git
-3. add the original repo as upstream, so that you can pull the newest changes
-    git remote add upstream https://github.com/Dao-AILab/flash-attention.git
-4. see the remote choices
-    git remote -v
-5. get the newest changes
-    git pull upstream/main
-    or git fetch upstream/main + git merge upstream/main
-6. push codes to remote (default: origin/main, you don't have access to upstream/main)
-    git push
-```
+
+    `git clone https://github.com/MitchellX/flash-attention.git`
+   
+4. add the original repo as upstream, so that you can pull the newest changes
+   
+    `git remote add upstream https://github.com/Dao-AILab/flash-attention.git`
+6. see the remote choices
+   
+    `git remote -v`
+8. get the newest changes
+   
+    `git pull upstream/main`
+    or
+
+   `git fetch upstream/main + git merge upstream/main`
+10. push codes to remote (default: origin/main, you don't have access to upstream/main)
+
+    `git push`
+
