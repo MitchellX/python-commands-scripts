@@ -1040,6 +1040,25 @@ git push origin new-feature-branch
     git pull
     
     git config pull.rebase false
-    git reset --hard HEAD@{1}
+    git reset --hard HEAD~1
 
+### cooperation on GitHub (submodule)
+```
+1. get the newest update from the original project
+2. push your own codes even without permission
+```
 
+```
+1. fork the desired project.
+2. clone the fork into your local repo
+    git clone https://github.com/MitchellX/flash-attention.git
+3. add the original repo as upstream, so that you can pull the newest changes
+    git remote add upstream https://github.com/Dao-AILab/flash-attention.git
+4. see the remote choices
+    git remote -v
+5. get the newest changes
+    git pull upstream/main
+    or git fetch upstream/main + git merge upstream/main
+6. push codes to remote (default: origin/main, you don't have access to upstream/main)
+    git push
+```
