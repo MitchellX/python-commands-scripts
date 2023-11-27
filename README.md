@@ -19,6 +19,7 @@ git push origin new-feature-branch
 
 ### cooperation on GitHub (submodule)
 ```
+objectives:
 1. get the newest update from the original project
 2. push your own codes even without permission
 ```
@@ -36,11 +37,8 @@ git push origin new-feature-branch
    
     `git remote -v`
 5. get the newest changes
-   
-    `git pull upstream/main`
-    or
 
-   `git fetch upstream/main + git merge upstream/main`
+   `git fetch + git merge upstream/main`
 6. push codes to remote (default: origin/main, you don't have access to upstream/main)
 
     `git push`
