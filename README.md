@@ -189,6 +189,11 @@ centOS：
 可以一条命令执行
 
     git checkout -b [branch name] 创建+切换分支
+
+## 切换到存在的旧分支
+    git branch -r (--remote)
+    git checkout [branch name]
+
     
 ## 将新分支推送到github
     git push origin [branch name]
