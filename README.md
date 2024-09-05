@@ -1082,4 +1082,7 @@ Using torch.true_divide(Dividend, Divisor) or numpy.true_divide(Dividend, Diviso
 export PYTHONPATH=$PYTHONPATH:$(pwd)
 ```
 
-
+## find command
+```
+find . -type f -name "*cuda_allocator*
+```
