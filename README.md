@@ -412,6 +412,19 @@ Taylor Swift videos:
     # 强制结束一些，你结束不了的session
     screen -X -S [session # you want to kill] quit
 
+## tmux vs screen 常用操作对照表
+
+| 操作         | screen 命令                     | tmux 命令                          |
+|--------------|----------------------------------|------------------------------------|
+| 安装工具     | `yum install -y screen`         | `yum install -y tmux`              |
+| 创建会话     | `screen -S name`                | `tmux new -s name`                 |
+| 分离会话     | `Ctrl+a d`                      | `Ctrl+b d`                         |
+| 查看会话     | `screen -ls`                    | `tmux ls`                          |
+| 恢复会话     | `screen -r name`                | `tmux attach -t name`              |
+| 强制恢复会话 | `screen -d -r`                  | `tmux attach -d -t name`           |
+| 结束会话     | `exit` 或 `Ctrl+d`              | `exit` 或 `Ctrl+d`                 |
+| 强制关闭会话 | `screen -X -S name quit`        | `tmux kill-session -t name`        |
+
 
 
 # shell命令
