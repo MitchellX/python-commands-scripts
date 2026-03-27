@@ -16,18 +16,18 @@
 
 ## 1. 仓库结构（按功能重组）
 
-> 这里是“逻辑重组”（文档层），不强制移动你的历史脚本文件，避免破坏旧路径。
+> 已完成一次物理重组：根目录脚本归档到 `scripts/`，杂项笔记归档到 `docs/notes/`，其余功能目录保持不变。
 
-### A) 根目录：通用脚本
-- `PIL_draw.py`
-- `batch_move.py`
-- `convert_txt_format.py`
-- `csv_gen.py`
-- `delete_script.py`
-- `image_review.py`
-- `to_excel.py`
-- `visualization_from_txt.py`
-- `visualization_match_biaozhuTeam.py`
+### A) Python 脚本（已归档）
+- `scripts/python/PIL_draw.py`
+- `scripts/python/batch_move.py`
+- `scripts/python/convert_txt_format.py`
+- `scripts/python/csv_gen.py`
+- `scripts/python/delete_script.py`
+- `scripts/python/image_review.py`
+- `scripts/python/to_excel.py`
+- `scripts/python/visualization_from_txt.py`
+- `scripts/python/visualization_match_biaozhuTeam.py`
 
 ### B) 指标计算
 - `calculate_ssim/`
@@ -37,21 +37,21 @@
 - `google_drive_downloader/`
 
 ### D) Shell 工具
-- `run.sh`
-- `copytxt.sh`
-- `rename.sh`
-- `doas-install.sh`
+- `scripts/shell/run.sh`
+- `scripts/shell/copytxt.sh`
+- `scripts/shell/rename.sh`
+- `scripts/shell/doas-install.sh`
 
 ### E) 文档笔记
-- `MacOS.md`
-- `VS2019.md`
-- `docker_mysql.md`
-- `memory.md`
-- `latex.md`
-- `Interview_notes.md`
-- `review.md`
-- `test.md`
-- `pycharm-remote-jupyter-ipy-access.md`
+- `docs/notes/MacOS.md`
+- `docs/notes/VS2019.md`
+- `docs/notes/docker_mysql.md`
+- `docs/notes/memory.md`
+- `docs/notes/latex.md`
+- `docs/notes/Interview_notes.md`
+- `docs/notes/review.md`
+- `docs/notes/test.md`
+- `docs/notes/pycharm-remote-jupyter-ipy-access.md`
 
 ---
 
@@ -281,51 +281,51 @@ ffmpeg -y -i /content/data/source_tmp.mp4 -ss 00:01:40 -to 00:01:50 -r 25 /conte
 > 这一节覆盖仓库里可执行的 `.py/.sh`。  
 > 一部分脚本是“硬编码路径”风格（没有 argparse），命令可直接跑，但通常需要先改脚本内路径变量。
 
-### 3.1 根目录 Python 脚本
+### 3.1 `scripts/python/` 脚本
 
-#### `PIL_draw.py`
+#### `scripts/python/PIL_draw.py`
 ```bash
-python PIL_draw.py
+python scripts/python/PIL_draw.py
 ```
 
-#### `batch_move.py`
+#### `scripts/python/batch_move.py`
 ```bash
-python batch_move.py
+python scripts/python/batch_move.py
 ```
 
-#### `convert_txt_format.py`
+#### `scripts/python/convert_txt_format.py`
 ```bash
-python convert_txt_format.py
+python scripts/python/convert_txt_format.py
 ```
 
-#### `csv_gen.py`
+#### `scripts/python/csv_gen.py`
 ```bash
-python csv_gen.py
+python scripts/python/csv_gen.py
 ```
 
-#### `delete_script.py`
+#### `scripts/python/delete_script.py`
 ```bash
-python delete_script.py
+python scripts/python/delete_script.py
 ```
 
-#### `image_review.py`
+#### `scripts/python/image_review.py`
 ```bash
-python image_review.py
+python scripts/python/image_review.py
 ```
 
-#### `to_excel.py`
+#### `scripts/python/to_excel.py`
 ```bash
-python to_excel.py
+python scripts/python/to_excel.py
 ```
 
-#### `visualization_from_txt.py`
+#### `scripts/python/visualization_from_txt.py`
 ```bash
-python visualization_from_txt.py
+python scripts/python/visualization_from_txt.py
 ```
 
-#### `visualization_match_biaozhuTeam.py`
+#### `scripts/python/visualization_match_biaozhuTeam.py`
 ```bash
-python visualization_match_biaozhuTeam.py
+python scripts/python/visualization_match_biaozhuTeam.py
 ```
 
 ### 3.2 SSIM 相关脚本（`calculate_ssim/`）
@@ -392,33 +392,33 @@ python google_drive_downloader/download_datasets.py
 
 ### 3.5 Shell 脚本
 
-#### `run.sh`
+#### `scripts/shell/run.sh`
 ```bash
-bash run.sh
+bash scripts/shell/run.sh
 ```
 
-#### `copytxt.sh`
+#### `scripts/shell/copytxt.sh`
 ```bash
-bash copytxt.sh
+bash scripts/shell/copytxt.sh
 ```
 
-#### `rename.sh`
+#### `scripts/shell/rename.sh`
 ```bash
-bash rename.sh
+bash scripts/shell/rename.sh
 ```
 
-#### `doas-install.sh`
+#### `scripts/shell/doas-install.sh`
 ```bash
-bash doas-install.sh -h
-bash doas-install.sh -e us -y
-bash doas-install.sh --scm -e cn
+bash scripts/shell/doas-install.sh -h
+bash scripts/shell/doas-install.sh -e us -y
+bash scripts/shell/doas-install.sh --scm -e cn
 ```
 
 ---
 
 ## 4. 速查：关键词索引
 
-为了 `Ctrl + F`，这里列常搜关键词：
+为了 `Ctrl + F`，这里列常搜关键词（含新目录路径）：
 
 - `git fetch --all && git reset --hard origin/main && git pull`
 - `rsync -aWPu`
@@ -427,10 +427,12 @@ bash doas-install.sh --scm -e cn
 - `tmux attach -d -t`
 - `python calculate_ssim/align_ssim_celeba_ffhq.py`
 - `python calculate_headpose/demo_FSANET_ssd_forensics_vgg2.py`
+- `python scripts/python/visualization_from_txt.py`
+- `bash scripts/shell/run.sh`
 - `python google_drive_downloader/gdrive_downloader.py`
 - `youtube-dl`
 - `ffmpeg -ss -to`
 
 ---
 
-如果你希望下一步继续“物理重组”目录（比如 `scripts/`, `docs/`, `tools/` 真正移动文件），我可以在保持兼容（提供软链接或迁移说明）的前提下再做一版。
+当前重组已完成；后续如果你想再做“按任务域二级拆分”（例如 `scripts/face_landmark/`, `scripts/metrics/`, `scripts/io/`），可以继续迭代。
